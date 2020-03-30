@@ -57,10 +57,10 @@ line-height: 1.57;
 
 a {
   text-decoration: none;
-  color: $dark;
+  color: #B22222;
   @extend .transition;
   &:hover {
-    color: $accent;
+    color: #FF00FF;
   }
 }
 
@@ -123,10 +123,13 @@ h1,h2,h3,h4,h5,h6 {
 header.header {
   @include basePadding;
   border-bottom: 1px solid $gray;
-  background-image: url("head.jpeg");
-  background-repeat: no-repeat;
-  background-size:  cover;
+  //background-image: url("head.jpeg");
+  //background-repeat: no-repeat;
+  //background-size:  cover;
   //background-color: #fff;
+  background-color: #990021;
+  //background: -moz-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
+  //background: linear-gradient(to right, #FFF 15%,#a52a2a 35%, #990021);
   position: fixed;
   top: 0;
   left: 0;
@@ -146,6 +149,7 @@ header.header {
     div.grid-6 {
       float: right;
       text-align: right;
+      
       a.post {
         @extend .btn;
         width: 120px;
@@ -174,7 +178,7 @@ header.header {
         margin-left: -4px;
       }
       &:hover ul {
-        color: $accent;
+        color: #FFF0F5;
         display: block;
       }
     }
@@ -193,6 +197,7 @@ header.header {
           padding: 10px 20px;
           text-align: left;
           border-bottom: 1px solid #d8d8d8;
+
         }
       }
      }
@@ -215,7 +220,14 @@ header.header {
     right: 0;
   }
 }
-div.contents.row {
+
+//メイン
+
+.contents.row {
+  display: flex;
+  background-image: -webkit-radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), -webkit-radial-gradient(91% 146%, rgba(255, 255, 255, 0.5) 47%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.5) 47%, rgba(0, 0, 0, 0.5) 100%);
+  background-blend-mode: screen; 
   h2 {
     @include boxBase(20px 0, 0);
     font-weight: normal;
@@ -228,14 +240,52 @@ div.contents.row {
   .new_user{
   font-family: "游ゴシック", "YuGothic";
   }
+  .profile{
+    width: 300px;
+    height: 100vh;
+    //height: 100%;
+    //background-color: ;
+    background: linear-gradient(to bottom,  rgb(224, 182, 210)1%, #F89174 60%, #748af8);
+    margin-right: 200px;
+    position: fixed;
+    .icon{
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      //background-color: $accent;
+      //background-image: url("dog.jpeg");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: $darkGray solid 5px;
+      margin: 50px;
+    }
+    .profile-contents{
+      margin: 0 50px;
+      border-bottom: #696969 solid 3px;
+      padding-bottom: 20px;
+      .prf-name h3{
+        color: black;
+        padding-bottom: 10px;
+      }
+    }
+  }
+  .post-box{
+    width: 660px;
+    margin: 0 auto;
+    //position: absolute;
+    //left: 550px;
+  }
   div.content_post {
     @include boxBase(20px 0 ,30px);
     position: relative;
     height: 400px;
+    //width: 400px;
     color: #fff;
+    margin:20px auto;
     background-size: cover;
     background-position: center center;
-    border-radius: 3px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba($black,0.2);
     &:after {
       content: '';
@@ -245,9 +295,9 @@ div.contents.row {
       left: 0;
       right: 0;
       @include filter-gradient(#000000, #a60000, vertical);
-      @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
+      @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 70%,rgba(252, 241, 196, 0.801) 100%));
       z-index: 1;
-      border-radius: 3px;
+      border-radius: 20px;
     }
     .more {
       position: absolute;
@@ -331,6 +381,12 @@ div.contents.row {
     }
   }
 }
+
+
+
+
+
+
 form {
   h3 {
     @include baseMargin(0 0 20px);
@@ -365,6 +421,7 @@ form {
   box-shadow: 0 0 10px rgba($black,0.2);
   background-color: $white;
   box-sizing: border-box;
+  margin-right: 200px;
 }
 .comments {
   padding: 5px;
@@ -380,6 +437,9 @@ form {
 footer {
   @include boxBase;
   color: $gray;
+  
+  
+  
   p {
     text-align: center;
   }

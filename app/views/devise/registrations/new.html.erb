@@ -1,0 +1,54 @@
+<div class="contents row">
+  <div class="container">
+    <h2>Sign up</h2>
+    <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+      <%= devise_error_messages! %>
+
+       <div class="field">
+        <%= f.label :nickname %> <em>(15 characters maximum)</em><br />
+        <%= f.text_field :nickname, autofocus: true, maxlength: "15" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %>
+        <% if @validatable %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        
+      </div>
+
+      
+      
+
+<div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">アップロード</span>
+        </div>
+        <div class="custom-file">
+          <%= f.file_field :avatar, class: 'custom-file-input' %>
+          <label class="custom-file-label" for="customFile" data-browse="参照">ファイル選択...</label>
+        </div>
+      </div>
+
+
+
+      <div class="actions">
+        <%= f.submit "Sign up" %>
+      </div>
+
+
+      
+    <% end %>
+  </div>
+</div>
