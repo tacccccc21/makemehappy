@@ -280,14 +280,17 @@ header.header {
     @include boxBase(20px 0 ,30px);
     position: relative;
     height: 400px;
+    width: 600px;
     //width: 400px;
     color: #fff;
     margin:20px auto;
     background-size: cover;
     background-position: center center;
+    background-repeat: no-repeat;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba($black,0.2);
     &:after {
+      
       content: '';
       position: absolute;
       top: 0;
