@@ -71,5 +71,5 @@ gem 'devise'
 gem 'kaminari'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
-# gem 'therubyracer'
-gem 'mini_racer', platforms: :ruby
+gem 'therubyracer'
+# gem 'mini_racer', platforms: :ruby
