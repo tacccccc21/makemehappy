@@ -1,0 +1,38 @@
+<i class="far fa-camera-polaroid">
+      <%= form.label :image %>
+      <%= form.file_field :image, class: "image" %>
+      </i>
+
+      
+      <!-- 評価 -->
+
+<%= form.hidden_field :tweet_id, value: @tweet.id %>
+<div class="col-md-6 col-md-offset-3">
+
+      <div class="field" id="star">
+            <%= form.label :star %>
+            <%= form.hidden_field :star, id: :review_star %>
+      </div>
+
+      
+</div>
+
+
+
+  <!-- 評価javascript -->
+  <script>
+  $('#star').raty({
+    size     : 36,
+    starOff:  '<%= asset_path('star-off.png') %>',
+    starOn : '<%= asset_path('star-on.png') %>',
+    starHalf: '<%= asset_path('star-half.png') %>',
+    scoreName: 'tweet[star]',
+    half: true,
+  });
+  </script>  
+
+
+      <!-- テキスト -->
+      
+      <%= form.text_area :text, placeholder: "text" , rows: "10" %>
+      <%= form.submit "SEND" %>

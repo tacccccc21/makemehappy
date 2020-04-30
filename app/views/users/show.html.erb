@@ -1,0 +1,15 @@
+<div class="contents row">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <div class ="profile-box">
+
+
+  </div>
+
+  <div class="twt-content">
+    <% @tweets.each do |tweet| %>
+     <%= render partial: "tweets/tweet", locals: { tweet: tweet } %>
+    <% end %>
+    <div class="scroll" onclick="scrollToTop()"></div>
+    <%= paginate(@tweets) %>
+  </div>
+</div>

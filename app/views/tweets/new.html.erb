@@ -4,15 +4,9 @@
       <h3>
         Post
       </h3>
-      <%= form.text_field :name, placeholder: "Nickname" %>
       
-      <i class="far fa-camera-polaroid">
-      <%= form.label :image %>
-      <%= form.file_field :image, class: "image" %>
-      </i>
+      <%= render partial: "form", locals: { form: form } %>
       
-      <%= form.text_area :text, placeholder: "text" , rows: "10" %>
-      <%= form.submit "SEND" %>
     <% end %>
   </div>
 </div>
