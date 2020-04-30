@@ -20,7 +20,30 @@
       <%= simple_format(tweet.text) %>
       <div class=star>
 
-      <a>⭐️</a><%= tweet.star %>
+      
+        
+        <!--星評価-->
+          <div id="star<%= tweet.id %>"><a>Review</a></div>
+            
+          <script>
+          $('#star<%= tweet.id %>').raty({
+            size: 36,
+            starOff:  '<%= asset_path('star-off.png') %>',
+            starOn : '<%= asset_path('star-on.png') %>',
+            starHalf: '<%= asset_path('star-half.png') %>',
+            half: true,
+            readOnly: true,
+            score: <%= tweet.star %>,
+          });
+          </script>  
+        <!--/星評価-->
+
+
+
+
+
+
+        
       </div>
       <span class="name">
         <a href="/users/<%= tweet.user.id %>">
