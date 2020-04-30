@@ -18,6 +18,10 @@
         </ul>
       </div>
       <%= simple_format(tweet.text) %>
+      <div class=star>
+
+      <a>⭐️</a><%= tweet.star %>
+      </div>
       <span class="name">
         <a href="/users/<%= tweet.user.id %>">
           <span>wearrist</span><%= tweet.user.nickname %>
