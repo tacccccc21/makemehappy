@@ -52,3 +52,6 @@ production:
   database: makemehappy_production
   username: makemehappy
   password: <%= ENV['MAKEMEHAPPY_DATABASE_PASSWORD'] %>
+  adapter: mysql2
+  encoding: unicode
+  pool: 5
