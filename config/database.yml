@@ -54,7 +54,7 @@ test:
 #
 production:
   <<: *default
-  database: makemehappy_production
+  database: makemehappy_development
   username: makemehappy
   password: <%= ENV['MAKEMEHAPPY_DATABASE_PASSWORD'] %>
   adapter: mysql2
