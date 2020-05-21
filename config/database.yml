@@ -19,7 +19,7 @@ default: &default
 
 development:
   <<: *default
-  database: makemehappy_development
+  database: mysql2
   username: root
   password: <%= ENV['MAKEMEHAPPY_DATABASE_PASSWORD'] %>
   adapter: mysql2
@@ -53,8 +53,8 @@ test:
 #
 production:
   <<: *default
-  database: makemehappy_development
-  username: makemehappy
+  database: mysql2
+  username: root
   password: <%= ENV['MAKEMEHAPPY_DATABASE_PASSWORD'] %>
   adapter: mysql2
   encoding: utf8
