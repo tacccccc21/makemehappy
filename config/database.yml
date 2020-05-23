@@ -19,10 +19,11 @@ default: &default
 
 development:
   <<: *default
-  database: mysql2
+  database: makemehappy_development
   username: root
-  password: <%= ENV['MAKEMEHAPPY_DATABASE_PASSWORD'] %>
+  # password: <%= ENV['MAKEMEHAPPY_DATABASE_PASSWORD'] %>
   adapter: mysql2
+  encoding: utf8
   pool: 5
 
 # Warning: The database defined as "test" will be erased and
@@ -53,11 +54,11 @@ test:
 #
 production:
   <<: *default
-  database: mysql2
+  database: makemehappy_development
   username: root
-  password: <%= ENV['MAKEMEHAPPY_DATABASE_PASSWORD'] %>
+  # password: <%= ENV['MAKEMEHAPPY_DATABASE_PASSWORD'] %>
   adapter: mysql2
   encoding: utf8
   pool: 5
   socket: /tmp/mysql.sock
-  master_key: <%= ENV['RAILS_MASTER_KEY'] %>
+  # master_key: <%= ENV['RAILS_MASTER_KEY'] %>
