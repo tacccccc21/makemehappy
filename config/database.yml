@@ -57,7 +57,7 @@ production:
   database: makemehappy_development
   username: root
   # password: <%= ENV['MAKEMEHAPPY_DATABASE_PASSWORD'] %>
-  adapter: mysql
+  adapter: mysql2
   encoding: utf8
   pool: 5
   socket: /tmp/mysql.sock
