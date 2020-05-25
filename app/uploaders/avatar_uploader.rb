@@ -6,10 +6,10 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # Choose what kind of storage to use for this uploader:
   if Rails.env.development?
     # ローカルに保存する
-    storage :file
+    storage :fog
   elsif Rails.env.test?
     # ローカルに保存する
-    storage :file
+    storage :fog
   else
     # S3などの外部に保存する
     storage :fog
