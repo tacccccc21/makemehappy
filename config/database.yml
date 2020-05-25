@@ -57,9 +57,9 @@ production:
   database: makemehappy_development
   username: root
   # password: <%= ENV['MAKEMEHAPPY_DATABASE_PASSWORD'] %>
-  adapter: mysql2
+  adapter: mysql
   encoding: utf8
   pool: 5
   socket: /tmp/mysql.sock
-
+heroku config:set DATABASE_URL
   # master_key: <%= ENV['RAILS_MASTER_KEY'] %>
