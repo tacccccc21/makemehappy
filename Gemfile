@@ -76,7 +76,7 @@ gem 'devise-i18n-views'
 gem 'therubyracer'
 # gem 'mini_racer', platforms: :ruby
 gem 'rails_12factor', group: :production
-
+gem 'fog-aws'
 
 group :production do
   gem 'mysql2'
