@@ -20,18 +20,7 @@
 
 
   <!-- 評価javascript -->
-  <script >
-  $('#star').raty({
-    size     : 36,
-    starOff:  '<%= asset_path('star-off.png') %>',
-    starOn : '<%= asset_path('star-on.png') %>',
-    starHalf: '<%= asset_path('star-half.png') %>',
-    scoreName: 'tweet[star]',
-    half: true,
-  });
-  </script>  
-
-  <script type="text/javascript">
+ <script type="text/javascript">
       WebFontConfig = {
         google: { families: [ 'Unica+One::latin' ] }
       };
@@ -45,6 +34,19 @@
         s.parentNode.insertBefore(wf, s);
       })();
     </script>
+
+  <script >
+  $('#star').raty({
+    size     : 36,
+    starOff:  '<%= asset_path('star-off.png') %>',
+    starOn : '<%= asset_path('star-on.png') %>',
+    starHalf: '<%= asset_path('star-half.png') %>',
+    scoreName: 'tweet[star]',
+    half: true,
+  });
+  </script>  
+
+ 
 
       <!-- テキスト -->
       
