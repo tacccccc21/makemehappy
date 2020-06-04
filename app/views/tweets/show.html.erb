@@ -13,15 +13,54 @@
       </ul>
       <%end%>
     </div>
-    <%= simple_format(@tweet.text) %>
+    
+  </div>
+
+  
+
+
+
+
+<div class=info>
+
+
     
     <span class="name">
     <a href="/users/<%= @tweet.user.id %>">
         <span>投稿者</span><%= @tweet.user.nickname %>
       </a>
     </span>
+    
 
-  </div>
+
+
+      
+      <!--星評価-->
+          <div id="star<%= @tweet.id %>"><a>Review</a></div>
+            
+          <script>
+          $('#star<%= @tweet.id %>').raty({
+            size: 36,
+            starOff:  '<%= asset_path('star-off.png') %>',
+            starOn : '<%= asset_path('star-on.png') %>',
+            starHalf: '<%= asset_path('star-half.png') %>',
+            half: true,
+            readOnly: true,
+            score: <%= @tweet.star %>,
+          });
+          </script>  
+          
+        <!--/星評価-->
+
+<%= simple_format(@tweet.text) %>
+        
+    </div>
+
+
+
+
+
+
 
   <div class="container">
     <% if current_user %>
