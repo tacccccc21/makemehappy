@@ -1,6 +1,7 @@
 <div class ="contents row">
   <div class="content_post" style="background-image: url(<%= @tweet.image %>);">
     <div class="more">
+    <% if  user_signed_in? && current_user.id == @tweet.user_id%>
       <span><%= image_tag 'arrow_top.png' %></span>
       <ul class="more_list">
         <li>
@@ -10,6 +11,7 @@
           <%= link_to '削除', "/tweets/#{@tweet.id}", method: :delete %>
         </li>
       </ul>
+      <%end%>
     </div>
     <%= simple_format(@tweet.text) %>
     

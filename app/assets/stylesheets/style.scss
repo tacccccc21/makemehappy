@@ -311,6 +311,7 @@ header.header {
       height: 100px;
       width: 80px;
       text-align: right;
+      width: 30px;
       &:hover ul.more_list {
         display: block;
       }
@@ -379,6 +380,7 @@ header.header {
     background-color: $white;
     box-sizing: border-box;
     text-align: center;
+    margin: 60px auto;
     h3 {
       @include baseMargin;
     }
@@ -425,6 +427,7 @@ form {
   background-color: $white;
   box-sizing: border-box;
   margin-right: 200px;
+  margin: 40px auto;
 }
 .comments {
   padding: 5px;
