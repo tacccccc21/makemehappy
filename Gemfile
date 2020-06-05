@@ -79,6 +79,6 @@ gem 'rails_12factor', group: :production
 gem 'fog-aws'
 
 group :production do
-  gem 'mysql2'
+  gem 'pg'
 end
 

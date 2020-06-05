@@ -54,10 +54,10 @@ test:
 #
 production:
   <<: *default
-  database: makemehappy_development
-  username: root
+  database: db/production.postgresql
+  # username: root
   # password: <%= ENV['MAKEMEHAPPY_DATABASE_PASSWORD'] %>
-  adapter: postgres
+  adapter: postgresql
   encoding: utf8
   pool: 5
   socket: /tmp/mysql.sock
