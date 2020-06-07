@@ -55,7 +55,7 @@ test:
 production:
   <<: *default
   database: db/production.postgresql
-  username: nirlykbohtwugd
+  username: ofylevpgujenft
   url: <%= ENV['DATABASE_URL'] %>
   # password: <%= ENV['MAKEMEHAPPY_DATABASE_PASSWORD'] %>
   adapter: postgresql
