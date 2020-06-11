@@ -1,11 +1,30 @@
 <div class="contents row">
-  <p><%= @nickname %>さんの投稿一覧</p>
+ 
   <div class ="profile-box">
 
-
+<div class="profile">
+  <div class="icon">
+  
+<img src="<%= @avatar %>" class="prf-img">
+  
   </div>
 
+  <div class="profile-contents">
+    <div class="prf-name">
+    
+    <h3>NAME: 
+    <% if user_signed_in? %>
+    <%= @nickname %>
+    <%end%>
+    </h3>
+    </div>
+  </div>
+</div>
+
+  </div>
+ 
   <div class="twt-content">
+  <p><%= @nickname %>さんの投稿一覧</p>
     <% @tweets.each do |tweet| %>
      <%= render partial: "tweets/tweet", locals: { tweet: tweet } %>
     <% end %>
