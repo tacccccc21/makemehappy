@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     @avatar = user.avatar
     @nickname = user.nickname
     @tweets = user.tweets.page(params[:page]).per(10).order("created_at DESC")
-    @likes = Like.where(tweet_id: @tweet)
+    @likes = Like.where(tweet_id: @tweet).all
   end
 
   # def likes
