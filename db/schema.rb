@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_03_27_080023) do
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
+
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "text"
     t.text "image"
@@ -55,4 +56,5 @@ ActiveRecord::Schema.define(version: 2020_03_27_080023) do
 
   add_foreign_key "likes", "tweets"
   add_foreign_key "likes", "users"
+
 end
