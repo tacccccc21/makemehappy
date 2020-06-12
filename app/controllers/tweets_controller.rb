@@ -55,4 +55,8 @@ class TweetsController < ApplicationController
     redirect_to action: :index unless user_signed_in?
   end
 
+#   def collection
+#     @tweet = Tweet.find(params[:id])
+#     @likes = Like.where(tweet_id: @tweet.id).all
+#   end
 end
