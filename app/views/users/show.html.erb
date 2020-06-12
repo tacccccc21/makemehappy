@@ -4,29 +4,36 @@
 
 <div class="profile">
   <div class="icon">
-  
-<img src="<%= @avatar %>" class="prf-img">
-  
+    <img src="<%= @avatar %>" class="prf-img">
   </div>
 
   <div class="profile-contents">
     <div class="prf-name">
     
-    <h3>NAME: 
-    <% if user_signed_in? %>
-    <%= @nickname %>
-    <%end%>
-    </h3>
+      <h3>NAME: 
+        <% if user_signed_in? %>
+        <%= @nickname %>
+        <%end%>
+      </h3>
+
     </div>
+
   </div>
+
+
+<%# <%= render ‘relationships/follow_button’, user: @user %>
+
+  
+
+
 </div>
 
   </div>
- 
+
   <div class="twt-content">
   <p><%= @nickname %>さんの投稿一覧</p>
     <% @tweets.each do |tweet| %>
-     <%= render partial: "tweets/tweet", locals: { tweet: tweet } %>
+    <%= render partial: "tweets/tweet", locals: { tweet: tweet } %>
     <% end %>
     <div class="scroll" onclick="scrollToTop()"></div>
     <%= paginate(@tweets) %>
