@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 2020_06_12_060123) do
     t.index ["user_id"], name: "index_relationships_on_user_id"
   end
 
-
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "text"
     t.text "image"
@@ -55,11 +54,8 @@ ActiveRecord::Schema.define(version: 2020_06_12_060123) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-
   add_foreign_key "relationships", "users"
   add_foreign_key "relationships", "users", column: "follow_id"
   add_foreign_key "likes", "tweets"
   add_foreign_key "likes", "users"
-
-
 end
