@@ -11,8 +11,8 @@ class Tweet < ApplicationRecord
   #   likes.find_by(user_id: user_id)
   # end
   
-  # def self.search(search)
-  #   return Tweet.all unless search
-  #   Tweet.where('text LIKE(?)', "%#{search}%")
-  # end
+  def self.search(search)
+    return Tweet.all unless search
+    Tweet.where('text LIKE(?)', "%#{search}%")
+  end
 end

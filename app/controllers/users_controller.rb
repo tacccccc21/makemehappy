@@ -7,8 +7,16 @@ class UsersController < ApplicationController
     @likes = Like.where(tweet_id: @tweet).all
   end
 
-  # def likes
-  #   @tweet = Tweet.find(params[:id])
-  #   @likes = Like.where(tweet_id: @tweet.id).all
-  # end
+
+  def following
+    @user  = User.find(params[:id])
+    @users = @user.followings
+    render 'show_follow'
+   end
+
+  def followers
+    @user  = User.find(params[:id])
+    @users = @user.followers
+  render 'show_follower'
+  end
 end
