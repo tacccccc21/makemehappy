@@ -5,7 +5,7 @@
  
 "makemehappy"とは
 SNS感覚で使える商品レビューアプリです。
-お気に入りに登録したり
+お気に入りに登録したり、投稿したりなど直感的に使えるようにしています。
  
 # DEMO
  
@@ -32,10 +32,15 @@ snsの仕組みを利用した気軽に商品紹介できるサービスです�
  
 # Requirement
  
-"hoge"を動かすのに必要なライブラリなどを列挙する
- 
-* huga 3.5.2
-* hogehuga 1.0.2
+ ```
+$ git clone https://github.com/tacccccc21/makemehappy.git
+$ cd makemehappy
+$ bundle install
+$ rails db:create
+$ rails db:migrate
+$ rails s
+👉 http://localhost:3000
+```
  
 # Installation
  
