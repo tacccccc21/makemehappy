@@ -8,12 +8,12 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :users, only: [:show]
-  resources :relationships, only: [:create, :destroy]
+  resources :users, only: [:show] do
+    member do
+      get :following, :followers
+    end
+  end
   
-  # post   '/like/:tweet_id' => 'likes#like',   as: 'like'
-  # delete '/like/:tweet_id' => 'likes#unlike', as: 'unlike'
-
-
+   resources :relationships,       only: [:create, :destroy]
 
 end
