@@ -37,7 +37,7 @@ SNS感覚で使える商品レビューアプリです。
 |------|----|-------|
 |email|integer|null: false|
 |nickname|integer|null: false|
-|avatar|strings|null: false||
+|avatar|string|null: false||
 
 ### Association
 - has_many :tweets, dependent: :destroy
@@ -47,6 +47,31 @@ SNS感覚で使える商品レビューアプリです。
 
 
 
+## likesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false|
+|tweet_id|integer|null: false|
+
+
+### Association
+- belongs_to :user
+- belongs_to :tweet
+
+
+## commentsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false|
+|tweet_id|integer|null: false|
+|text|text|null: false|
+
+
+### Association
+- belongs_to :user
+- belongs_to :tweet
  
 # DEMO
  
