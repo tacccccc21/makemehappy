@@ -42,13 +42,7 @@ $ rails s
 👉 http://localhost:3000
 ```
  
-# Installation
- 
-Requirementで列挙したライブラリなどのインストール方法を説明する
- 
-```bash
-pip install huga_package
-```
+
  
 # Usage
  ```
@@ -75,7 +69,8 @@ $ rails s
  
 
  
-* 中川 拓飛
+* 作成者 中川 拓飛
 
 * E-mail tacccccc21@gmail.com
- 
+
+* Github taccccc21
