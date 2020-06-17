@@ -21,7 +21,8 @@ SNS感覚で使える商品レビューアプリです。
 |user_id|integer|null: false|
 |text|text|null: false|
 |image|string|null: false|
-|star|integer|null: false|
+|star|integer||
+|likes_count|interger||
 
 ### Association
 - belongs_to :user
