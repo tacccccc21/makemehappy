@@ -22,13 +22,28 @@ SNS感覚で使える商品レビューアプリです。
 |text|text|null: false|
 |image|string|null: false|
 |star|integer||
-|likes_count|interger||
+|likes_count|integer||
 
 ### Association
 - belongs_to :user
 - has_many :comments
 - has_many :likes
 - has_many :liked_users, through: :likes, source: :user
+
+
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|email|integer|null: false|
+|nickname|integer|null: false|
+|avatar|strings|null: false||
+
+### Association
+- has_many :tweets, dependent: :destroy
+- has_many :comments, dependent: :destroy
+- has_many :likes, dependent: :destroy
+- has_many :like_tweets, through: :likes, source: :tweet
 
 
 
