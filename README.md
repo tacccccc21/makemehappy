@@ -6,6 +6,31 @@
 "makemehappy"とは
 SNS感覚で使える商品レビューアプリです。
 お気に入りに登録したり、投稿したりなど直感的に使えるようにしています。
+
+
+# 制作背景kuhuusitatokoro
+  
+  
+  
+#  database 設計
+
+## tweetsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false|
+|text|text|null: false|
+|image|string|null: false|
+|star|integer|null: false|
+
+### Association
+- belongs_to :user
+- has_many :comments
+- has_many :likes
+- has_many :liked_users, through: :likes, source: :user
+
+
+
  
 # DEMO
  
