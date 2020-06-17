@@ -55,6 +55,8 @@ $ rails s
 👉 http://localhost:3000
 ```
 
+rails 5.2.4.3
+ruby 2.5.1p57
 
  
 # Note
@@ -73,4 +75,4 @@ $ rails s
 
 * E-mail tacccccc21@gmail.com
 
-* Github taccccc21
+* Github tacccccc21
