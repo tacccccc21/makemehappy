@@ -481,6 +481,7 @@ footer {
   height: 780px;
   background: url(https://static1.squarespace.com/static/552b1764e4b03cff36ace4b2/t/5713b3771d07c0fc4a2c41fd/1460908922234/April21.jpg);
   position: relative;
+  opacity: 0.9;
 h1{
   position: absolute;
   left: 65px;
@@ -510,7 +511,7 @@ h1{
   top:140px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
   background-color: white;
-  opacity: 0.83;
+  opacity: 0.88;
   &__name{
       margin: 0 auto;
       width: 430px;
