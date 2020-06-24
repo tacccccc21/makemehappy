@@ -4,7 +4,7 @@
 
 <div class="profile">
   <div class="icon">
-  <% if user_signed_in? %>
+  <% if user_signed_in? %>   
 <img src="<%= current_user.avatar %>" class="prf-img">
   <%end%>
   </div>
@@ -43,10 +43,32 @@
 <div class="newSignUp">
 
 
+  <h1>MAKE ME HAPPY!</h1>
 
-<div class="newSignUp__Box">
+  <div class="newSignUp__Box">
 
-</div>
+    <div class="newSignUp__Box__name">
+      <h2>MAKE ME HAPPY! <span> とは？</span></h2>
+    </div>
+  
+    <div class="newSignUp__Box__text">
+      <p>
+      　このアプリは、SNS型の商品レビューサービスです。<br>お気軽に投稿できて、コメントによる質問や交流が楽しめます。
+      いろんなアイテムを見ることができるので新しい発見や趣味ができるかもしれません。ぜひお楽しみください！
+      </p>
+    </div>
+     
+
+
+      <div class="btnbox">
+        <div class="new">
+          <%= link_to "ログイン", new_user_session_path, class: 'newbtn' %>
+        </div>
+        <div class="new">
+          <%= link_to "新規登録", new_user_registration_path, class: 'newbtn' %>
+        </div>
+         </div>
+  </div>
 
 
 
