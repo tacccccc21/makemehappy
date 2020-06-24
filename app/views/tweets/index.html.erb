@@ -1,6 +1,6 @@
 <div class="contents row">
 
-
+<% if user_signed_in? %>
 
 <div class="profile">
   <div class="icon">
@@ -36,5 +36,21 @@
   <%= paginate(@tweets) %>
   
 </div>
+
+<% else %>
+
+
+<div class="newSignUp">
+
+
+
+
+</div>
+
+
+
+
+<% end %>
+
  
 </div>
