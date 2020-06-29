@@ -77,6 +77,8 @@ gem 'therubyracer'
 # gem 'mini_racer', platforms: :ruby
 gem 'rails_12factor', group: :production
 gem 'fog-aws'
+gem 'jquery-rails'
+gem 'ratyrate'
 
 group :production do
   gem 'pg'
