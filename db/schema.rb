@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2020_06_12_170743) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.integer "likes_count"
+    t.integer "like_count"
     t.float "star"
   end
 
