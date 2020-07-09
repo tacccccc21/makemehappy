@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_30_074450) do
+ActiveRecord::Schema.define(version: 2020_07_09_082321) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 2020_06_30_074450) do
     t.integer "user_id"
     t.integer "like_count"
     t.float "star"
+    t.string "ancestry"
+    t.index ["ancestry"], name: "index_tweets_on_ancestry"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
