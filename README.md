@@ -57,7 +57,7 @@ https://gyazo.com/e9f8b8afa5fc3821b02c6efa047b3249
 いいね機能
 https://gyazo.com/c76eaae09116d3b391e5339733888e5a
 
-投稿にコメント
+投稿にコメント(ajax)
 https://gyazo.com/007fff44a1ee815e9dd1df68837fb3a2
 
 投稿のインクリメンタルサーチ
