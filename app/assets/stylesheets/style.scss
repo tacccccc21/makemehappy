@@ -1,5 +1,6 @@
 @import "compass";
 
+
 /*
  * "ほのか明朝" licensed under the IPA Font License Agreement v1.0
  * http://fontfree.me/966（配布元のURL）
@@ -123,7 +124,6 @@ h1,h2,h3,h4,h5,h6 {
 header.header {
   @include basePadding;
   border-bottom: 1px solid $gray;
- 
   background-color: #990021;
   position: fixed;
   top: 0;
@@ -198,6 +198,7 @@ header.header {
      }
   }
 }
+
 .form {
   background: url(https://dl.dropboxusercontent.com/u/5840617/DeathtoStock_Wired3.jpg);
   background-size: cover;
@@ -568,4 +569,33 @@ h1{
 }
 
 
+}
+
+
+
+ // レスポンシブ タブレット
+
+@media screen and ( max-width:1200px )
+{
+  header.header{
+    height: 150px;
+    h1{
+      margin: 50px 0 0 30px ;
+    }
+  }
+
+
+  .contents.row{
+    margin-top: 90px;
+    display: flex;
+    .profile{
+    
+    }
+    .post-box{
+      width: 70%;
+      right: 0;
+    }
+  }
+
+  ;
 }
