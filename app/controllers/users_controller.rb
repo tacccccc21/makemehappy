@@ -7,7 +7,4 @@ class UsersController < ApplicationController
     @likes = Like.where(tweet_id: @tweet).all
     
   end
-
-
-
 end
