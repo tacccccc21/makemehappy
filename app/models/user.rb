@@ -17,8 +17,6 @@ class User < ApplicationRecord
     mount_uploader :avatar, AvatarUploader
 
   # フォロー機能
-  def following?(other_user)
-    following.include?(other_user)
-  end
+  
     
 end
