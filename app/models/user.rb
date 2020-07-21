@@ -16,7 +16,7 @@ class User < ApplicationRecord
     # ユーザー画像を関連付け
     mount_uploader :avatar, AvatarUploader
 
-  # フォロー機能
+  
   
     
 end
